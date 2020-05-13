@@ -27,9 +27,9 @@ class Application
 
       value = req.params["item"]
 
-      if @@items.include?(item)
-        @@cart << item
-        resp.write "added #{item}"
+      if @@items.include?(value)
+        @@cart << value
+        resp.write "added #{value}"
       else
         resp.write "We don't have that item"
       end

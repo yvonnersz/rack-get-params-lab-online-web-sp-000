@@ -24,7 +24,8 @@ class Application
       end
 
     elsif req.path.match(/add/)
-      handle_search(search_term)
+
+      item = req.params["q"]
 
 
     else

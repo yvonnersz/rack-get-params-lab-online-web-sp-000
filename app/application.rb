@@ -27,7 +27,7 @@ class Application
       search_term = req.params["q"]
 
       if handle_search(search_term)
-        @@cart << item
+        @@cart << search_term
         resp.write "added #{item}"
       else
         resp.write "We don't have that item"

@@ -24,9 +24,9 @@ class Application
       end
     elsif req.path.match(/add/)
 
-      item = req.params["q"]
+      search_term = req.params["q"]
 
-      if @@items.include?(item)
+      if handle_search(search_term)
         @@cart << item
         resp.write "added #{item}"
       else
